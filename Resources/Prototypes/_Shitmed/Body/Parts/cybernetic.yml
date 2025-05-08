@@ -203,3 +203,37 @@
     onAdd:
     - type: Prying
       speedModifier: 2
+
+- type: entity
+  parent: LeftFootCybernetic
+  id: MagLeftFoot
+  name: M.A.G Left Foot
+  description: A cybernetic left foot that works like magnetic boots.
+  components:
+  - type: BodyPart
+    onAdd:
+    - type: ToggleClothing
+      action: ActionToggleMagboots
+    - type: ComponentToggler
+      components:
+      - type: NoSlip
+    - type: Magboots
+      activeWalkModifier: 0.85
+      activeSprintModifier: 0.8
+    
+- type: entity
+  parent: RightFootCybernetic
+  id: MagRightFoot
+  name: M.A.G Right Foot
+  description: A cybernetic right foot that works like magnetic boots.
+  components:
+  - type: BodyPart
+    onAdd:
+    - type: ToggleClothing
+      action: ActionToggleMagboots
+    - type: ComponentToggler
+      components:
+      - type: NoSlip
+    - type: Magboots
+      activeWalkModifier: 0.85
+      activeSprintModifier: 0.8
